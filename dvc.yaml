@@ -1,0 +1,11 @@
+stages:
+  preprocess:
+    cmd: python3 prepare_data.py
+    deps:
+    - data/raw/california_housing.csv
+    - prepare_data.py
+    outs:
+    - data/processed/X_test.csv
+    - data/processed/X_train.csv
+    - data/processed/y_test.csv
+    - data/processed/y_train.csv
